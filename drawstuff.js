@@ -15,7 +15,7 @@ class Color {
             }
         } // end try
         
-        catch (e) {            console.log(e);
+2        catch (e) {            console.log(e);
         }
     } // end Color constructor
 
@@ -25,8 +25,7 @@ class Color {
             else if ((r<0) || (g<0) || (b<0) || (a<0)) 
                 throw "color component less than 0";
             else if ((r>255) || (g>255) || (b>255) || (a>255))                 throw "color component bigger than 255";
-            else {
-                this.r = r; this.g = g; this.b = b; this.a = a; 
+            else {                this.r = r; this.g = g; this.b = b; this.a = a; 
             }
         } // end throw
         
@@ -73,7 +72,7 @@ function main() {
     var imagedata = context.createImageData(w,h);
  
     // Draw a rectangle with pixels
-    var c = new Color(255,0,0,255); // the color at the pixel: black opaque
+    var c = new Color(255,255,0,100); // the color at the pixel: black opaque
     for (var x=20; x<300; x++) 
         for (var y=50; y<595; y++) {
             drawPixel(imagedata,x,y,c);
