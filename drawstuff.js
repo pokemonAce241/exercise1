@@ -80,7 +80,7 @@ function main() {
     // Draw a rectangle with pixels
     var c = new Color(0,255,255,255); // the color at the pixel: black opaque
     for (var x=10; x<100; x++) 
-        for (var y=50; y<75; y++) {
+        for (var y=50; y<275; y++) {
             drawPixel(imagedata,x,y,c);
             // console.log("draw at " +x+ " " +y);
         }
