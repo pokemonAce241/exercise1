@@ -9,27 +9,33 @@ class Color {
             else if ((r<0) || (g<0) || (b<0) || (a<0)) 
                 throw "color component less than 0";
             else if ((r>255) || (g>255) || (b>255) || (a>255)) 
-3                throw "color component bigger than 255";
+                throw "color component bigger than 255";
             else {
                 this.r = r; this.g = g; this.b = b; this.a = a; 
             }
         } // end try
         
-2        catch (e) {            console.log(e);
+        catch (e) {
+            console.log(e);
         }
     } // end Color constructor
 
-        // Color change method    change(r,g,b,a) {        try {
+        // Color change method
+    change(r,g,b,a) {
+        try {
             if ((typeof(r) !== "number") || (typeof(g) !== "number") || (typeof(b) !== "number") || (typeof(a) !== "number"))
                 throw "color component not a number";
             else if ((r<0) || (g<0) || (b<0) || (a<0)) 
                 throw "color component less than 0";
-            else if ((r>255) || (g>255) || (b>255) || (a>255))                 throw "color component bigger than 255";
-            else {                this.r = r; this.g = g; this.b = b; this.a = a; 
+            else if ((r>255) || (g>255) || (b>255) || (a>255)) 
+                throw "color component bigger than 255";
+            else {
+                this.r = r; this.g = g; this.b = b; this.a = a; 
             }
         } // end throw
         
-        catch (e) {            console.log(e);
+        catch (e) {
+            console.log(e);
         }
     } // end Color change method
 } // end color class
@@ -72,9 +78,9 @@ function main() {
     var imagedata = context.createImageData(w,h);
  
     // Draw a rectangle with pixels
-    var c = new Color(255,255,0,100); // the color at the pixel: black opaque
-    for (var x=20; x<100; x++) 
-        for (var y=50; y<195; y++) {
+    var c = new Color(0,0,0,255); // the color at the pixel: black opaque
+    for (var x=50; x<100; x++) 
+        for (var y=50; y<75; y++) {
             drawPixel(imagedata,x,y,c);
             // console.log("draw at " +x+ " " +y);
         }
