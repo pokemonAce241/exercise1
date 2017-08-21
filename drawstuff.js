@@ -31,8 +31,7 @@ class Color {
             }
         } // end throw
         
-        catch (e) {
-            console.log(e);
+        catch (e) {            console.log(e);
         }
     } // end Color change method
 } // end color class
@@ -75,7 +74,7 @@ function main() {
     var imagedata = context.createImageData(w,h);
  
     // Draw a rectangle with pixels
-    var c = new Color(0,0,255,255); // the color at the pixel: black opaque
+    var c = new Color(0,255,255,100); // the color at the pixel: black opaque
     for (var x=20; x<100; x++) 
         for (var y=50; y<95; y++) {
             drawPixel(imagedata,x,y,c);
