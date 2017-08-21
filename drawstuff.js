@@ -21,8 +21,7 @@ class Color {
     } // end Color constructor
 
         // Color change method
-    change(r,g,b,a) {
-        try {
+    change(r,g,b,a) {        try {
             if ((typeof(r) !== "number") || (typeof(g) !== "number") || (typeof(b) !== "number") || (typeof(a) !== "number"))
                 throw "color component not a number";
             else if ((r<0) || (g<0) || (b<0) || (a<0)) 
@@ -78,9 +77,9 @@ function main() {
     var imagedata = context.createImageData(w,h);
  
     // Draw a rectangle with pixels
-    var c = new Color(0,0,0,255); // the color at the pixel: black opaque
-    for (var x=50; x<100; x++) 
-        for (var y=50; y<75; y++) {
+    var c = new Color(33,44,55,255); // the color at the pixel: black opaque
+    for (var x=20; x<100; x++) 
+        for (var y=50; y<95; y++) {
             drawPixel(imagedata,x,y,c);
             // console.log("draw at " +x+ " " +y);
         }
